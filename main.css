@@ -862,6 +862,18 @@ img {
   .company-panel {
     gap: 1.5rem;
     padding: 1.5rem 1.25rem;
+    grid-template-columns: 1fr;
+  }
+
+  .panel-album {
+    margin-bottom: 0.5rem;
+  }
+
+  .company-about {
+    background: linear-gradient(135deg, #fff 0%, #f7faf6 100%);
+    padding: 1.75rem;
+    border-radius: 1.5rem;
+    border: 1px solid var(--border);
   }
 
   .panel-album h2,
@@ -874,19 +886,50 @@ img {
     font-size: 1.4rem;
   }
 
+  .panel-description-center {
+    line-height: 1.8;
+    font-size: 0.95rem;
+  }
+
+  .company-actions {
+    margin-top: 1.25rem;
+    justify-content: flex-start;
+  }
+
   .panel-middle,
   .panel-actions {
     padding: 1.25rem;
+  }
+
+  .panel-middle {
+    order: -1;
+    margin-bottom: 0;
+  }
+
+  .panel-actions {
+    order: 1;
   }
 
   .hero {
     padding: 2rem 1.25rem;
     min-height: auto;
     gap: 1.5rem;
+    grid-template-columns: 1fr;
   }
 
   .hero-copy {
     max-width: 100%;
+    order: 2;
+  }
+
+  .hero-visual {
+    order: 1;
+    width: 100%;
+    height: 300px;
+  }
+
+  .hero-card {
+    min-height: 300px;
   }
 
   .hero h1 {
@@ -1079,6 +1122,14 @@ img {
   .company-panel {
     gap: 1.25rem;
     padding: 1.25rem 1rem;
+    grid-template-columns: 1fr;
+  }
+
+  .company-about {
+    background: linear-gradient(135deg, #fff 0%, #f7faf6 100%);
+    padding: 1.5rem;
+    border-radius: 1.25rem;
+    border: 1px solid var(--border);
   }
 
   .panel-album h2 {
@@ -1096,13 +1147,32 @@ img {
     gap: 0.75rem;
   }
 
-  .contact-quick {
-    gap: 0.6rem;
+  .panel-middle {
+    order: -1;
+  }
+
+  .panel-actions {
+    order: 1;
   }
 
   .hero {
     padding: 1.5rem 1rem 2rem;
     gap: 1.25rem;
+    grid-template-columns: 1fr;
+  }
+
+  .hero-copy {
+    order: 2;
+  }
+
+  .hero-visual {
+    order: 1;
+    width: 100%;
+    height: 280px;
+  }
+
+  .hero-card {
+    min-height: 280px;
   }
 
   .hero h1 {
@@ -1295,6 +1365,14 @@ img {
   .company-panel {
     gap: 1rem;
     padding: 1rem 0.85rem;
+    grid-template-columns: 1fr;
+  }
+
+  .company-about {
+    background: linear-gradient(135deg, #fff 0%, #f7faf6 100%);
+    padding: 1.25rem;
+    border-radius: 1rem;
+    border: 1px solid var(--border);
   }
 
   .panel-album h2 {
@@ -1306,8 +1384,33 @@ img {
     font-size: 1rem;
   }
 
+  .panel-middle,
+  .panel-actions {
+    order: -1;
+  }
+
+  .panel-actions {
+    order: 1;
+  }
+
   .hero {
     padding: 1.25rem 0.85rem 1.75rem;
+    grid-template-columns: 1fr;
+  }
+
+  .hero-copy {
+    order: 2;
+  }
+
+  .hero-visual {
+    order: 1;
+    width: 100%;
+    height: 250px;
+  }
+
+  .hero-card {
+    padding: 1.25rem;
+    min-height: 250px;
   }
 
   .hero h1 {
@@ -1316,10 +1419,6 @@ img {
 
   .hero p {
     font-size: 0.9rem;
-  }
-
-  .hero-card {
-    padding: 1.25rem;
   }
 
   .hero-card h2 {
