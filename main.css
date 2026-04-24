@@ -797,24 +797,529 @@ img {
   }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 1024px) {
+  .company-panel {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem 1.5rem;
+  }
+
+  .panel-album {
+    align-items: start;
+  }
+
+  .panel-album h2 {
+    font-size: 1.6rem;
+  }
+
+  .company-actions {
+    justify-content: flex-start;
+  }
+
+  .menu-panel {
+    grid-template-columns: 1fr;
+    padding: 1rem 1.5rem;
+    gap: 1rem;
+  }
+}
+
+/* MOBILE OPTIMIZATIONS */
+
+@media (max-width: 768px) {
   .topbar {
-    padding: 1rem;
+    padding: 1rem 1.25rem;
+    flex-wrap: wrap;
+  }
+
+  .brand {
+    gap: 0.6rem;
+  }
+
+  .brand-logo {
+    width: 3.5rem;
+  }
+
+  .brand strong {
+    font-size: 0.9rem;
+  }
+
+  .brand small {
+    font-size: 0.75rem;
+  }
+
+  .menu {
+    gap: 0.75rem;
+  }
+
+  .menu a {
+    font-size: 0.85rem;
+  }
+
+  .topbar .btn {
+    display: none;
   }
 
   .hero {
-    padding-top: 3rem;
+    padding: 2rem 1.25rem;
+    min-height: auto;
+    gap: 1.5rem;
+  }
+
+  .hero-copy {
+    max-width: 100%;
   }
 
   .hero h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .eyebrow {
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-actions {
+    gap: 0.75rem;
+    flex-direction: column;
+  }
+
+  .hero-visual {
+    width: 100%;
+    order: -1;
+  }
+
+  .hero-card {
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+  }
+
+  .hero-card h2 {
+    font-size: 1.4rem;
   }
 
   .section {
-    padding: 2.5rem 1rem;
+    padding: 2rem 1.25rem;
+  }
+
+  .section-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-layout {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .detail-copy ul {
+    margin: 1rem 0 0;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .gallery-grid img {
+    height: 200px;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .feature-card {
+    min-height: 100px;
+    font-size: 0.9rem;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
   }
 
   .btn {
     width: 100%;
+    padding: 0.9rem 1.4rem;
+    font-size: 0.95rem;
+  }
+
+  .calculator-grid {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+
+  .modal-panel {
+    padding: 1rem;
+    border-radius: 1.5rem;
+  }
+
+  .modal-arrow {
+    width: 2.8rem;
+    height: 2.8rem;
+    font-size: 1.2rem;
+  }
+
+  .modal-photo-frame {
+    border-radius: 1.25rem;
+  }
+
+  .whatsapp-float {
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 1.5rem;
+    right: 1rem;
+    bottom: 1rem;
+  }
+
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .topbar {
+    padding: 0.9rem 1rem;
+    gap: 0.75rem;
+  }
+
+  .brand {
+    flex: 1;
+    gap: 0.5rem;
+  }
+
+  .brand-logo {
+    width: 3rem;
+  }
+
+  .brand strong {
+    font-size: 0.8rem;
+  }
+
+  .brand small {
+    font-size: 0.65rem;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: none;
+    background: transparent;
+    color: #103818;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 25;
+  }
+
+  .menu.active {
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: #fff;
+    border-bottom: 1px solid var(--border);
+    padding: 1rem;
+    gap: 0.5rem;
+    display: flex !important;
+    align-items: stretch;
+    z-index: 24;
+  }
+
+  .menu.active a {
+    padding: 0.75rem 1rem;
+    border-radius: 0.75rem;
+    background: #f7faf6;
+    display: block;
+  }
+
+  .hero {
+    padding: 1.5rem 1rem 2rem;
+    gap: 1.25rem;
+  }
+
+  .hero h1 {
+    font-size: 1.6rem;
+    line-height: 1.1;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .eyebrow {
+    font-size: 0.8rem;
+    padding: 0.5rem 0.85rem;
+  }
+
+  .hero-actions {
+    gap: 0.6rem;
+  }
+
+  .hero-card h2 {
+    font-size: 1.2rem;
+  }
+
+  .hero-card p {
+    font-size: 0.9rem;
+  }
+
+  .section {
+    padding: 1.75rem 1rem;
+  }
+
+  .section-header {
+    margin-bottom: 1.25rem;
+  }
+
+  .section-header h2 {
+    font-size: 1.4rem;
+  }
+
+  .section-header span {
+    font-size: 0.85rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .gallery-grid img {
+    height: 250px;
+    border-radius: 1.2rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .feature-card {
+    min-height: 80px;
+    font-size: 0.85rem;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .service-card {
+    padding: 1.5rem;
+  }
+
+  .calculator-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .calculator-panel,
+  .calculator-result,
+  .detail-copy,
+  .service-card,
+  .contact-card {
+    padding: 1.5rem;
+  }
+
+  .btn {
+    padding: 0.85rem 1.2rem;
+    font-size: 0.9rem;
+    border-radius: 0.8rem;
+  }
+
+  .modal-panel {
+    padding: 0.85rem;
+    border-radius: 1.25rem;
+    max-height: min(95vh, 100%);
+  }
+
+  .modal-close {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.25rem;
+  }
+
+  .modal-arrow {
+    width: 2.4rem;
+    height: 2.4rem;
+    font-size: 1rem;
+  }
+
+  .modal-gallery {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .photo-counter {
+    bottom: 0.75rem;
+    right: 0.75rem;
+    padding: 0.4rem 0.7rem;
+    font-size: 0.85rem;
+  }
+
+  .whatsapp-float {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.3rem;
+  }
+
+  .panel-description {
+    font-size: 0.95rem;
+  }
+
+  .company-actions {
+    width: 100%;
+  }
+
+  .company-actions .btn {
+    min-width: auto;
+  }
+
+  .detail-visual {
+    min-height: 250px;
+  }
+
+  .visual-card {
+    padding: 1.5rem;
+  }
+
+  .contact-quick p {
+    font-size: 0.9rem;
+  }
+
+  .services-quick li {
+    padding: 0.75rem 0.9rem;
+    font-size: 0.9rem;
+  }
+
+  .panel-middle {
+    padding: 1.5rem;
+  }
+
+  .footer {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .topbar {
+    padding: 0.75rem 0.85rem;
+  }
+
+  .brand-logo {
+    width: 2.5rem;
+  }
+
+  .brand strong {
+    font-size: 0.75rem;
+  }
+
+  .brand small {
+    font-size: 0.6rem;
+  }
+
+  .menu-toggle {
+    width: 2.25rem;
+    height: 2.25rem;
+    font-size: 1.3rem;
+  }
+
+  .hero {
+    padding: 1.25rem 0.85rem 1.75rem;
+  }
+
+  .hero h1 {
+    font-size: 1.3rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  .hero-card {
+    padding: 1.25rem;
+  }
+
+  .hero-card h2 {
+    font-size: 1.1rem;
+  }
+
+  .section {
+    padding: 1.5rem 0.85rem;
+  }
+
+  .section-header h2 {
+    font-size: 1.2rem;
+  }
+
+  .gallery-grid {
+    gap: 0.6rem;
+  }
+
+  .gallery-grid img {
+    height: 200px;
+    border-radius: 1rem;
+  }
+
+  .btn {
+    padding: 0.8rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .modal-panel {
+    padding: 0.75rem;
+  }
+
+  .modal-arrow {
+    display: none;
+  }
+
+  .modal-gallery {
+    justify-content: center;
+  }
+
+  .whatsapp-float {
+    width: 2.75rem;
+    height: 2.75rem;
+    font-size: 1.2rem;
+    right: 0.75rem;
+    bottom: 0.75rem;
+  }
+
+  .contact-quick p,
+  .services-quick li {
+    font-size: 0.85rem;
+  }
+
+  .panel-description {
+    font-size: 0.9rem;
+  }
+
+  .detail-visual {
+    min-height: 200px;
   }
 }

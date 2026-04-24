@@ -1,4 +1,33 @@
-﻿document.addEventListener('DOMContentLoaded', () => {
+﻿// MOBILE MENU HANDLER
+const menuToggle = document.getElementById('menuToggle');
+const mobileMenu = document.getElementById('mobileMenu');
+
+if (menuToggle && mobileMenu) {
+  menuToggle.addEventListener('click', () => {
+    const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+    menuToggle.setAttribute('aria-expanded', !isExpanded);
+    mobileMenu.classList.toggle('active');
+  });
+
+  // Fechar menu ao clicar em um link
+  const menuLinks = mobileMenu.querySelectorAll('a');
+  menuLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+      menuToggle.setAttribute('aria-expanded', 'false');
+      mobileMenu.classList.remove('active');
+    });
+  });
+
+  // Fechar menu ao redimensionar para desktop
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 640) {
+      menuToggle.setAttribute('aria-expanded', 'false');
+      mobileMenu.classList.remove('active');
+    }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
   const galleryModal = document.getElementById('galleryModal');
   const galleryLinks = document.querySelectorAll('.open-gallery');
   const galleryClose = document.getElementById('closeGallery');
